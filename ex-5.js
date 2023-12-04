@@ -82,3 +82,15 @@ let orders = [
 ];
 
 // Start coding here
+//The most expensive order is order id 8 (36,884,000 Baht) 
+//หาตัวมากสุดก่อน แล้วค่อยแสดงผล
+
+let max = 0;
+  let result;
+for(let i = 0;i<orders.length; i++){
+  if((orders[i].productPrice*orders[i].productQuantity) > max){
+    max = orders[i].productPrice*orders[i].productQuantity
+    result = orders[i].id
+  }
+}
+console.log(`The most expensive product in orders id ${result} (${max.toLocaleString(`th-TH`)} Baht)`)

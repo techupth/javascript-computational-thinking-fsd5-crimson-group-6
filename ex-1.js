@@ -80,5 +80,11 @@ let orders = [
     creditCardType: "visa-electron",
   },
 ];
-
+// ราคาตัว id1 ที่คูณกันแล้วไปบวกต่อ
 // Start coding here
+  let totalsum =0;
+  let result;
+  for(let sum of orders){
+    totalsum = totalsum+(sum.productPrice*sum.productQuantity);
+  }
+console.log(`Total amount of the orders: ${totalsum.toLocaleString(`th-TH`)} Baht`);
