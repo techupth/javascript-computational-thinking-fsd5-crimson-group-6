@@ -82,3 +82,16 @@ let orders = [
 ];
 
 // Start coding here
+// TODO: ให้ใช้ For Loop หาคำสั่งซื้อที่มีมูลค่าสูงที่สุดใน orders และนำมูลค่านี้มาแสดงผลบนหน้าจอพร้อมกับเลข ID ของคำสั่งซื้อนั้น
+// * The most expensive order is order id 8 (36,884,000 Baht) 
+let highestPrice = 0;
+let expensiveOrderId;
+for (let index of orders) {
+  const currentPrice = index.productPrice * index.productQuantity;
+  if (currentPrice > highestPrice) {
+    highestPrice = currentPrice;
+    expensiveOrderId = index.id;
+  }
+}
+console.log(`The most expensive order is order id ${expensiveOrderId} (${highestPrice.toLocaleString('th-TH')} Baht)`)
+
