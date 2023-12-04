@@ -82,3 +82,15 @@ let orders = [
 ];
 
 // Start coding here
+//The most expensive product in orders: Wine - Red, Harrow Estates, Cab
+//เอาราคาแต่ละชิ้นมาเรียงกัน แล้วหาตัวมากสุด
+let max = 0;
+  let result;
+for(let i = 0;i<orders.length; i++){
+  if(orders[i].productPrice > max){
+    max = orders[i].productPrice
+    result =  orders[i].productName
+  }
+}
+
+console.log(`The most expensive product in orders: ${result}`)

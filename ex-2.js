@@ -82,3 +82,12 @@ let orders = [
 ];
 
 // Start coding here
+//คัดแยกที่ต้องการ แล้วค่อยนำเงินกับชิ้นมาคูณกัน
+let totalsum = 0;
+  let result;
+for(let sum of orders){
+  if(sum.creditCardType === "jcb"){
+    totalsum = totalsum+(sum.productPrice*sum.productQuantity)
+  }
+}
+console.log(`Paid by JCB credit card amount:(${totalsum.toLocaleString(`th-TH`)} Baht)`);
