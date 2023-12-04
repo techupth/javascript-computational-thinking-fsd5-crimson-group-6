@@ -82,3 +82,12 @@ let orders = [
 ];
 
 // Start coding here
+// TODO: ให้ใช้ For Loop หาผลรวมของคำสั่งซื้อที่จ่ายด้วยบัตรเครดิตประเภท jcb จาก orders ใน Exercise ข้อที่แล้ว
+// * Paid by JCB credit card amount: (8,515,926 Baht)
+let totalSales = 0;
+for (let total of orders) {
+  if (total.creditCardType === "jcb") {
+    totalSales = totalSales + (total.productPrice * total.productQuantity);
+  }
+}
+console.log(`Paid by JCB credit card amount: (${totalSales.toLocaleString('th-TH')} Baht)`);
