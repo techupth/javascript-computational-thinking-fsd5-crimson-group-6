@@ -82,3 +82,10 @@ let orders = [
 ];
 
 // Start coding here
+// TODO: ให้ใช้ For Loop ในการหามูลค่าคำสั่งซื้อทั้งหมด
+// * Total amount of the orders: 62,255,151 Baht
+let totalSales = 0;
+for (let total of orders) {
+  totalSales = totalSales + (total.productPrice * total.productQuantity);
+}
+console.log(`Total amount of the orders: ${totalSales.toLocaleString('th-TH')} Baht`);
